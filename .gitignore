@@ -1,4 +1,4 @@
 node_modules/
 .vite/
 .env
-dist/
+dist/node_modules/
