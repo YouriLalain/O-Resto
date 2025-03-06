@@ -1,0 +1,231 @@
+/* Styles pour la modal */
+.restaurant-modal .modal-content {
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation d'entrée de la modal */
+.restaurant-modal.show .modal-dialog {
+    animation: modalSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: translateY(30px) scale(0.95);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/* Effet de survol sur les cartes */
+.hover-shadow {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.hover-shadow:hover {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.12) !important;
+}
+
+/* Effet de survol sur les éléments du menu */
+.hover-bg-light {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-bg-light:hover {
+    background-color: rgba(0,0,0,0.03) !important;
+    transform: translateX(4px);
+}
+
+/* Style des icônes circulaires */
+.icon-circle {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.icon-circle:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Style des boutons d'action */
+.restaurant-modal .btn-light {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.restaurant-modal .btn-light:hover {
+    transform: scale(1.1) rotate(5deg);
+    background-color: white;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+/* Style des badges de prix */
+.restaurant-modal .badge {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+.restaurant-modal .badge:hover {
+    transform: scale(1.05) translateY(-2px);
+    box-shadow: 0 6px 16px rgba(13, 110, 253, 0.3);
+}
+
+/* Animation du bouton Commander */
+.restaurant-modal .btn-primary {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #0d6efd, #0a58ca);
+    border: none;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+.restaurant-modal .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(13, 110, 253, 0.4);
+}
+
+.restaurant-modal .btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Style de l'image de couverture */
+.restaurant-modal img {
+    transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: brightness(0.95);
+}
+
+.restaurant-modal img:hover {
+    transform: scale(1.03);
+    filter: brightness(1);
+}
+
+/* Style des catégories du menu */
+.category-icon {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(13, 110, 253, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.category-icon:hover {
+    transform: rotate(15deg) scale(1.1);
+    background: rgba(13, 110, 253, 0.15);
+}
+
+/* Animation des étoiles */
+.text-warning {
+    animation: starPulse 2s infinite cubic-bezier(0.16, 1, 0.3, 1);
+    filter: drop-shadow(0 0 2px rgba(255, 193, 7, 0.5));
+}
+
+@keyframes starPulse {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 2px rgba(255, 193, 7, 0.5));
+    }
+    50% {
+        transform: scale(1.2);
+        filter: drop-shadow(0 0 4px rgba(255, 193, 7, 0.8));
+    }
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 2px rgba(255, 193, 7, 0.5));
+    }
+}
+
+/* Style du dégradé de l'en-tête */
+.restaurant-modal .position-absolute {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    backdrop-filter: blur(4px);
+}
+
+.restaurant-modal .position-absolute:hover {
+    background: linear-gradient(transparent, rgba(0,0,0,0.95)) !important;
+    backdrop-filter: blur(6px);
+}
+
+/* Style des listes du menu */
+.list-group-item {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.list-group-item:hover {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Style du scrollbar */
+.restaurant-modal .modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.restaurant-modal .modal-body::-webkit-scrollbar-track {
+    background: rgba(241, 241, 241, 0.8);
+    border-radius: 3px;
+}
+
+.restaurant-modal .modal-body::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.5);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.restaurant-modal .modal-body::-webkit-scrollbar-thumb:hover {
+    background: rgba(85, 85, 85, 0.8);
+}
+
+/* Animation du titre */
+.restaurant-modal h2 {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.restaurant-modal h2:hover {
+    transform: translateX(4px);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Effet de glassmorphism sur les cartes */
+.restaurant-modal .card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animation des icônes d'utensiles */
+.restaurant-modal .fa-utensils {
+    animation: utensilsBounce 2s infinite;
+}
+
+@keyframes utensilsBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+} 
